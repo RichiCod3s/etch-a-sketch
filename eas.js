@@ -4,14 +4,15 @@ const totalWidth = 500;
 
 // create initial grid
 for(let i = 0; i< size*size; i++){
-    itemSize = totalWidth / size;
+    itemSize = totalWidth / size; // used to calculate div size for the container
     let div = document.createElement('div');
     div.classList.add("grid-item");
-    // new grid should be generated in the same total space as before (e.g., 960px wide) so that you’ve got a new sketch pad.
+    // new grid should be generated in the same total space as before 
         div.style.width = itemSize + "px";
         div.style.height = itemSize + "px";
 
     div.addEventListener('mouseover', function() {
+        //random colour for each div when mouse hovers over
         var randomColor = Math.floor(Math.random()*16777215).toString(16); 
         div.style.backgroundColor = "#" + randomColor;
     });
@@ -44,7 +45,7 @@ function createGrid(size) {
     }
 }
 
-// resize button popup
+// resize button - initiates create grid function
 button = document.querySelector('#resize-button');
 
 button.addEventListener("click", () => {
