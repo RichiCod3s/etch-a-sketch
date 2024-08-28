@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.grid-item{
+    width: 70px;
+    height: 70px;
+    border: 1px ridge black;
+      
+}
+
